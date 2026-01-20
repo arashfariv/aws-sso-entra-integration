@@ -1,0 +1,47 @@
+# AWS CLI Configuration for SSO
+# Location: ~/.aws/config (Linux/Mac) or %USERPROFILE%\.aws\config (Windows)
+#
+# Usage:
+#   aws sso login --profile dev-engineer
+#   aws sts get-caller-identity --profile dev-engineer
+#
+# Note: Replace account IDs, role names, and SSO URL with your values
+
+[profile dev-engineer]
+sso_start_url = https://d-xxxxxxxxxx.awsapps.com/start
+sso_region = us-east-1
+sso_account_id = 123456789012
+sso_role_name = EngineeringPower
+region = us-east-1
+output = json
+
+[profile prod-readonly]
+sso_start_url = https://d-xxxxxxxxxx.awsapps.com/start
+sso_region = us-east-1
+sso_account_id = 234567890123
+sso_role_name = SalesReadOnly
+region = us-east-1
+output = json
+
+[profile emergency-admin]
+sso_start_url = https://d-xxxxxxxxxx.awsapps.com/start
+sso_region = us-east-1
+sso_account_id = 234567890123
+sso_role_name = EmergencyAdmin
+region = us-east-1
+output = json
+
+# Alternative: Using sso-session (AWS CLI v2.10+)
+# This allows sharing SSO session across profiles
+
+[sso-session my-sso]
+sso_start_url = https://d-xxxxxxxxxx.awsapps.com/start
+sso_region = us-east-1
+sso_registration_scopes = sso:account:access
+
+[profile dev-with-session]
+sso_session = my-sso
+sso_account_id = 123456789012
+sso_role_name = EngineeringPower
+region = us-east-1
+output = json
