@@ -236,9 +236,9 @@ fields @timestamp, eventName, userIdentity.onBehalfOf.userId,
 |----------|-------------|
 | [Implementation Guide](docs/AWS-SSO-Integration-Guide-Final.docx) | Complete technical documentation (25+ pages) |
 | [Operational Runbooks](docs/AWS-SSO-Integration-Runbooks-Final.docx) | 24 step-by-step procedures |
-| [Architecture Diagrams](diagrams/AWS-SSO-Architecture-Diagrams.html) | 11 visual diagrams |
+| [Architecture Diagrams](https://htmlpreview.github.io/?https://github.com/arashfariv/aws-sso-entra-integration/blob/main/diagrams/AWS-SSO-Architecture-Diagrams.html) | 11 visual diagrams (click to view) |
 
-> **Note:** Download the `.docx` files to view in Microsoft Word or Google Docs. The `.html` file opens directly in any web browser.
+> **Note:** Download the `.docx` files to view in Microsoft Word or Google Docs.
 
 ## 👤 Author
 
